@@ -5,18 +5,12 @@ let package = Package(
     name: "Lottie",
     platforms: [.iOS(.v9), .macOS("10.10")],
     products: [
-        .library(name: "Lottie", targets: ["Lottie", "LottieMacOS"])
+        .library(name: "Lottie", targets: ["Lottie"])
     ],
     targets: [
         .target(
             name: "Lottie",
-            path: "lottie-swift/src",
-            exclude: ["Public/MacOS"]
-        ),
-        .target(
-            name: "LottieMacOS",
-            path: "lottie-swift/src",
-            exclude: ["Public/iOS"]
+            path: "lottie-swift/src"
         )
     ]
 )
